@@ -1,0 +1,12 @@
+[project]
+name = "OpenCiv"
+version = "0.1.0"
+require-python = ">=3.12, <3.13"
+dependencies = [
+	"jax"
+	"flax"
+	"dataclasses"
+]
+
+[project.optional-dependencies]
+gpu = ["jax[cuda12]"]
