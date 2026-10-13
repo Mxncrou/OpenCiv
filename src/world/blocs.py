@@ -3,7 +3,7 @@ import jax
 import jax.numpy as jnp
 
 @struct.dataclass
-class Ground_Bloc:
+class Bloc:
     colors: jax.Array
 
     @classmethod
@@ -12,4 +12,5 @@ class Ground_Bloc:
                 colors = jnp.array(colors, dtype=jnp.uint8)
                 )
 
-GROUND_TABLE = Ground_Bloc.create_table([[0, 255, 0], [0, 0, 255]])
+GROUND_TABLE = Bloc.create_table([[0, 255, 0], [0, 0, 255]])
+CONSTR_TABLE = Bloc.create_table([[0, 0, 0], [255, 0, 0]])
